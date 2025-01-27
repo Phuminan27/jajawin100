@@ -5,18 +5,18 @@
   <ion-grid>
     <ion-row>
       <!-- แสดงรายการสินค้าในตะกร้า -->
-      <ion-col size="12" *ngFor="let product of cartItems">
+      <ion-col size="12" *ngFor="let sh of datashow">
         <ion-card>
           <ion-item>
             <ion-thumbnail slot="start">
-              <img [src]="product.imageURL">
+              <img src="https://st4.depositphotos.com/14953852/24787/v/450/depositphotos_247872612-stock-illustration-no-image-available-icon-vector.jpg" width="150px">
             </ion-thumbnail>
             <ion-label>
-              <h2>{{ product.name }}</h2>
-              <p>ราคา: {{ product.price }} บาท</p>
-              <p>จำนวน: {{ product.quantity }}</p>
+              <h2>{{sh.drink_name}}</h2>
+              <p>ราคา: {{sh.drink_price}} บาท</p>
+              <p>จำนวน: </p>
             </ion-label>
-            <ion-button slot="end" color="danger" (click)="removeFromCart(product)">
+            <ion-button slot="end" color="danger" >
               <ion-icon name="trash-outline"></ion-icon>
             </ion-button>
           </ion-item>
@@ -32,7 +32,7 @@
             <ion-card-title>สรุปยอดสั่งซื้อ</ion-card-title>
           </ion-card-header>
           <ion-card-content>
-            <p>ยอดรวม: {{ totalPrice }} บาท</p>
+            <p>ยอดรวม:  บาท</p>
           </ion-card-content>
         </ion-card>
 
@@ -53,7 +53,7 @@
 
   <!-- ปุ่มลอย (FAB) สำหรับไปหน้าการชำระเงิน -->
   <ion-fab vertical="bottom" horizontal="start" slot="fixed">
-    <ion-fab-button color="success" (click)="goToCheckout()">
+    <ion-fab-button color="success" (click)="goToPraped()" >
       <ion-icon name="arrow-back-outline"></ion-icon>
     </ion-fab-button>
   </ion-fab>

@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { addIcons } from 'ionicons';
 import { bagHandleOutline } from 'ionicons/icons';
 import { NavController } from '@ionic/angular';
+import { DataapiService } from '../dataapi.service';
 
 @Component({
   selector: 'app-sinka3',
@@ -10,16 +11,18 @@ import { NavController } from '@ionic/angular';
 })
 export class Sinka3Page implements OnInit {
 
-  constructor(private navCtrl : NavController) { addIcons({ bagHandleOutline }); }
+  constructor(private navCtrl: NavController,
+    public dataapi:DataapiService
+  ) { addIcons({ bagHandleOutline }); }
 
   ngOnInit() {
   }
 
-  goToPraped(){
+  goToPraped() {
     this.navCtrl.navigateForward('/praped1')
   }
 
-  goToTakra(){
+  goToTakra() {
     this.navCtrl.navigateForward('/takra')
   }
 
@@ -45,8 +48,6 @@ export class Sinka3Page implements OnInit {
       detail: 'Knorr Cup Joke Fish Flavor',
       imageURL: '../../assets/JOKECUP.png'
     },
-  ]
-  sinka6 = [
     {
       id: 2,
       name: 'โจ๊กคัพ รสไข่เค็ม',
@@ -59,36 +60,52 @@ export class Sinka3Page implements OnInit {
       price: 7,
       detail: 'Mama Tom Yum Shrimp Creamy Soup',
       imageURL: '../../assets/whan.png'
-    },{
+    }, {
       id: 6,
       name: 'มาม่ารสหมูสับ',
       price: 15,
       detail: 'Mama Minced Pork Flavor',
       imageURL: '../../assets/MAMAMUSUP.png'
-    },{
+    }, {
       id: 6,
       name: 'มาม่ารสต้มยำกุ้ง',
       price: 15,
       detail: 'Mama Minced Pork Flavor',
       imageURL: '../../assets/MAMAKUNGs.png'
-    },{
+    }, {
       id: 6,
       name: 'OK มาม่ารสไข่เค็ม',
       price: 15,
       detail: 'Mama Minced Pork Flavor',
       imageURL: '../../assets/OKMAMA.png'
-    },{
+    }, {
       id: 6,
       name: 'ซัมยัง มาม่าเผ็ดเกาหลี',
       price: 15,
       detail: 'Mama Minced Pork Flavor',
       imageURL: '../../assets/KOREA1.png'
-    },{
+    }, {
       id: 6,
       name: 'ซัมยัง มาม่าเผ็ดเกาหลีชีส',
       price: 15,
       detail: 'Mama Minced Pork Flavor',
       imageURL: '../../assets/KOREA2.png'
     },
-  ]
+  ];
+
+  adddata(show: any) {
+    this.dataapi.showdata = show;
+    let data = {
+      drink_name: show.name,
+      drink_price: show.price
+    }
+    this.dataapi.addproducts(data).subscribe({
+      next: (res: any) => {
+        console.log("บันทึกข้อมูลสำเร็จ", res);
+      },
+      error: (err: any) => {
+        console.log("ไม่สามารถบันทึกข้อมูลได้", err)
+      }
+    });
+  }
 }

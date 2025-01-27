@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { addIcons } from 'ionicons';
 import { bagHandleOutline } from 'ionicons/icons';
 import { NavController } from '@ionic/angular'
+import { DataapiService } from '../dataapi.service';
 
 @Component({
   selector: 'app-sinka2',
@@ -10,8 +11,11 @@ import { NavController } from '@ionic/angular'
 })
 export class Sinka2Page implements OnInit {
 
-  constructor(private navCtrl: NavController) { addIcons({ bagHandleOutline }); }
-
+  constructor(
+    private navCtrl: NavController,
+    public dataapi: DataapiService) {
+    addIcons({ bagHandleOutline });
+  }
   ngOnInit() {
   }
 
@@ -44,8 +48,6 @@ export class Sinka2Page implements OnInit {
       detail: 'Doritos',
       imageURL: '../../assets/doritos.png'
     },
-  ]
-  sinka4 = [
     {
       id: 2,
       name: 'ปาร์ตี้',
@@ -70,13 +72,13 @@ export class Sinka2Page implements OnInit {
       price: 20,
       detail: 'DOZO',
       imageURL: '../../assets/DOSO.png'
-    },{
+    }, {
       id: 7,
       name: 'ทาโร่',
       price: 20,
       detail: 'TARO',
       imageURL: '../../assets/TARO.png'
-    },{
+    }, {
       id: 7,
       name: 'เบนโตะ',
       price: 20,
@@ -90,6 +92,21 @@ export class Sinka2Page implements OnInit {
       detail: 'TARO',
       imageURL: '../../assets/KARADA.png'
     },
-
   ]
+
+  adddata(show: any) {
+    this.dataapi.showdata = show;
+    let data = {
+      drink_name: show.name,
+      drink_price: show.price
+    }
+    this.dataapi.addproducts(data).subscribe({
+      next: (res: any) => {
+        console.log("บันทึกข้อมูลสำเร็จ", res);
+      },
+      error: (err: any) => {
+        console.log("ไม่สามารถบันทึกข้อมูลได้", err)
+      }
+    });
+  }
 }

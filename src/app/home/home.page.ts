@@ -15,22 +15,15 @@ import { bagHandleOutline } from 'ionicons/icons';
 
 export class HomePage {
 
-  txtstu: any;
+  txtid_produucts: any;
   txtname: any;
-  txtnname: any;
-  txtage: any;
-  txtaddress: any;
-  txtphone: any;
-  txtstatus: any;
+  txtprice: any;
 
   // ประกาศตัวแปรสำหรับส่งข้อมูลไปยัง API
-  id_stu: any;
+  id_produucts: any;
   name: any;
-  nname: any;
-  age: any;
-  address: any;
-  phone: any;
-  status: any;
+  price: any;
+  
 
   constructor(public dataapi: DataapiService, public router: Router) { }
 
@@ -40,16 +33,12 @@ export class HomePage {
 
   addmembers() {
     let data = {
-      id_stu: this.txtstu,
+      id_stu: this.txtid_produucts,
       name: this.txtname,
-      nname: this.txtnname,
-      age: this.txtage,
-      phone: this.txtphone,
-      address: this.txtaddress,
-      status: this.txtstatus
+      nname: this.txtprice,
     };
 
-    this.dataapi.addProduct(data).subscribe({
+    this.dataapi.addproducts(data).subscribe({
       next: (res: any) => {
         console.log("ข้อมูลถูกเพิ่ม", res);
       },
@@ -62,13 +51,9 @@ export class HomePage {
   }
 
   clearform() {
-    this.txtstu = "";
+    this.txtid_produucts = "";
     this.txtname = "";
-    this.txtnname = "";
-    this.txtage = "";
-    this.txtphone = "";
-    this.txtaddress = "";
-    this.txtstatus = "";
+    this.txtprice = "";
   }
 
   
