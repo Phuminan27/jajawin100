@@ -1,0 +1,25 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="perpul">
+    <ion-title>Login</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <br>
+  <ion-card>
+    <div class="text-center">
+      <h2>
+        เข้าสู่ระบบ
+      </h2>
+    </div>
+
+    <div class="ion-padding">
+      <ion-input label="Username" [(ngModel)]="txtusername" type="text" class="mt-4" fill="solid"></ion-input>
+      <ion-input label="Password" [(ngModel)]="txtpassword" type="password" class="mt-4" fill="solid"></ion-input>
+    </div>
+
+    <ion-button expand="block" (click)="login()" color="primary">Login</ion-button>
+    <br>
+    <ion-button color="success" expand="block" (click)="registerpage( )">สร้างบัชชีใหม่</ion-button>
+  </ion-card>
+</ion-content>

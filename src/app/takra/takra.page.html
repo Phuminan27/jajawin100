@@ -1,6 +1,3 @@
-
-
-
 <ion-content class="ion-padding">
   <ion-grid>
     <ion-row>
@@ -9,14 +6,17 @@
         <ion-card>
           <ion-item>
             <ion-thumbnail slot="start">
-              <img src="https://st4.depositphotos.com/14953852/24787/v/450/depositphotos_247872612-stock-illustration-no-image-available-icon-vector.jpg" width="150px">
+              <img
+                src="../../assets/image/jajalogo.png"
+                width="150px"
+              />
             </ion-thumbnail>
             <ion-label>
               <h2>{{sh.drink_name}}</h2>
               <p>ราคา: {{sh.drink_price}} บาท</p>
-              <p>จำนวน: </p>
+              <p>จำนวน:</p>
             </ion-label>
-            <ion-button slot="end" color="danger" >
+            <ion-button slot="end" color="danger">
               <ion-icon name="trash-outline"></ion-icon>
             </ion-button>
           </ion-item>
@@ -32,30 +32,27 @@
             <ion-card-title>สรุปยอดสั่งซื้อ</ion-card-title>
           </ion-card-header>
           <ion-card-content>
-            <p>ยอดรวม:  บาท</p>
+            <p>ยอดรวม: บาท</p>
           </ion-card-content>
         </ion-card>
 
-        <ion-button id="present-alert" expand="full" color="success" >
+        <ion-button id="present-alert" expand="full" color="success">
           จองคิว
         </ion-button>
         <ion-alert
-        trigger="present-alert"
-            header="กรุณากรอกข้อมูล"
-            [buttons]="alertButtons"
-              [inputs]="alertInputs"
-               ></ion-alert>
-        
+          trigger="present-alert"
+          header="กรุณากรอกข้อมูล"
+          [buttons]="alertButtons"
+          [inputs]="alertInputs"
+        ></ion-alert>
       </ion-col>
-
     </ion-row>
   </ion-grid>
 
   <!-- ปุ่มลอย (FAB) สำหรับไปหน้าการชำระเงิน -->
   <ion-fab vertical="bottom" horizontal="start" slot="fixed">
-    <ion-fab-button color="success" (click)="goToPraped()" >
+    <ion-fab-button color="success" (click)="goToPraped()">
       <ion-icon name="arrow-back-outline"></ion-icon>
     </ion-fab-button>
   </ion-fab>
-  
 </ion-content>

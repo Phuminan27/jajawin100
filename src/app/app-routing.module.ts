@@ -46,6 +46,10 @@ const routes: Routes = [
   {
     path: 'orderlist',
     loadChildren: () => import('./orderlist/orderlist.module').then( m => m.OrderlistPageModule)
+  },
+  {
+    path: 'login',
+    loadChildren: () => import('./login/login.module').then( m => m.LoginPageModule)
   }
 ];
 

@@ -22,17 +22,17 @@ interface CartItem {
 export class TakraPage {
 
   datashow:any=[];
-  // // ระบุชนิดข้อมูลของ cartItems เป็น CartItem[]
-  // cartItems: CartItem[] = [
-  //   { name: 'มาม่าต้มยำกุ้ง', price: 8, quantity: 1, imageURL: 'assets/MAMAKUNGs.png' },
-  //   { name: 'น้ำเป๊ปซี่', price: 13, quantity: 2, imageURL: 'assets/pepsi01.png' }
-  // ];
+  // ระบุชนิดข้อมูลของ cartItems เป็น CartItem[]
+   // cartItems: CartItem[] = [
+     // { name: 'มาม่าต้มยำกุ้ง', price: 8, quantity: 1, imageURL: 'assets/MAMAKUNGs.png' },
+     // { name: 'น้ำเป๊ปซี่', price: 13, quantity: 2, imageURL: 'assets/pepsi01.png' }
+   // ];
   
 
-  // // คำนวณยอดรวม
-  // get totalPrice() {
-  //   return this.cartItems.reduce((sum, item) => sum + (item.price * item.quantity), 0);
-  // }
+ // คำนวณยอดรวม
+   // get totalPrice() {
+     // return this.cartItems.reduce((sum, item) => sum + (item.price * item.quantity), 0);
+   // }
 
   constructor(
     private navCtrl: NavController, 

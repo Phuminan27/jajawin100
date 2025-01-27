@@ -37,84 +37,84 @@ export class SinkaPage implements OnInit {
       name: 'โค้ก',
       price: 15,
       detail: 'Coke',
-      imageURL: '../../assets/coke-full-red-325-ml-hires.png'
+      imageURL: '../../assets/image/coke-full-red-325-ml-hires.png'
     },
     {
       id: 3,
       name: 'น้ำเปล่า',
       price: 7,
       detail: 'Water',
-      imageURL: '../../assets/mongfer.png'
+      imageURL: '../../assets/image/mongfer.png'
     },
     {
       id: 5,
       name: 'สปอนเซอร์',
       price: 15,
       detail: 'Sponser',
-      imageURL: '../../assets/sponsor-1.png'
+      imageURL: '../../assets/image/sponsor-1.png'
     },
     {
       id: 7,
       name: 'โค้ก ซีโร่',
       price: 15,
       detail: 'Coke',
-      imageURL: '../../assets/COKEZERO.png'
+      imageURL: '../../assets/image/COKEZERO.png'
     },
     {
       id: 9,
       name: 'เย็นเย็น',
       price: 7,
       detail: 'YenYen',
-      imageURL: '../../assets/yenyen_400ml_mixedHerbsCooling.png'
+      imageURL: '../../assets/image/yenyen_400ml_mixedHerbsCooling.png'
     },
     {
       id: 11,
       name: 'เพียวริขุ',
       price: 12,
       detail: 'Sponser',
-      imageURL: '../../assets/puriku-1.png'
+      imageURL: '../../assets/image/puriku-1.png'
     },
     {
       id: 12,
       name: 'โออิชิ ชากูซ่า',
       price: 15,
       detail: 'Oishi',
-      imageURL: '../../assets/OISHI.png'
+      imageURL: '../../assets/image/OISHI.png'
     },
     {
       id: 13,
       name: 'โออิชิ องุ่นเคียวโฮ',
       price: 20,
       detail: 'OISHI GRAPE',
-      imageURL: '../../assets/KYOHO.png'
+      imageURL: '../../assets/image/KYOHO.png'
     },
     {
       id: 14,
       name: 'เอ็ม 150',
       price: 15,
       detail: 'M150',
-      imageURL: '../../assets/M150.webp'
+      imageURL: '../../assets/image/M150.webp'
     },
     {
       id: 15,
       name: 'คาราบาว',
       price: 15,
       detail: 'Pepsi',
-      imageURL: '../../assets/CARAMUJO.png'
+      imageURL: '../../assets/image/CARAMUJO.png'
     },
     {
       id: 16,
       name: 'กาแฟเบอร์ดี้',
       price: 20,
       detail: 'Pepsi',
-      imageURL: '../../assets/latte-1.png'
+      imageURL: '../../assets/image/latte-1.png'
     },
     {
       id: 17,
       name: 'กาแฟเอสเปรสโซ่',
       price: 15,
       detail: 'Liptin',
-      imageURL: '../../assets/espresso-1.png'
+      imageURL: '../../assets/image/espresso-1.png'
     },
   ];
 

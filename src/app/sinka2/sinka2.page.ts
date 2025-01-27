@@ -32,65 +32,65 @@ export class Sinka2Page implements OnInit {
       name: 'สาหร่ายมาชิตะ',
       price: 15,
       detail: 'Machita',
-      imageURL: '../../assets/machita.webp'
+      imageURL: '../../assets/image/machita.webp'
     },
     {
       id: 3,
       name: 'เลย์รสออริจินอล',
       price: 20,
       detail: 'Lays',
-      imageURL: '../../assets/lays-original_75g.webp'
+      imageURL: '../../assets/image/lays-original_75g.webp'
     },
     {
       id: 5,
       name: 'โดริโทส',
       price: 15,
       detail: 'Doritos',
-      imageURL: '../../assets/doritos.png'
+      imageURL: '../../assets/image/doritos.png'
     },
     {
       id: 2,
       name: 'ปาร์ตี้',
       price: 10,
       detail: 'Party',
-      imageURL: '../../assets/party.png'
+      imageURL: '../../assets/image/party.png'
     }, {
       id: 4,
       name: 'โทโร่',
       price: 20,
       detail: 'Toro',
-      imageURL: '../../assets/toro.png'
+      imageURL: '../../assets/image/toro.png'
     }, {
       id: 6,
       name: 'สแน็คแจ็ค',
       price: 15,
       detail: 'SnackJack',
-      imageURL: '../../assets/snackjak.png'
+      imageURL: '../../assets/image/snackjak.png'
     }, {
       id: 7,
       name: 'โดโสะ',
       price: 20,
       detail: 'DOZO',
-      imageURL: '../../assets/DOSO.png'
+      imageURL: '../../assets/image/DOSO.png'
     }, {
       id: 7,
       name: 'ทาโร่',
       price: 20,
       detail: 'TARO',
-      imageURL: '../../assets/TARO.png'
+      imageURL: '../../assets/image/TARO.png'
     }, {
       id: 7,
       name: 'เบนโตะ',
       price: 20,
       detail: 'TARO',
-      imageURL: '../../assets/bento.png'
+      imageURL: '../../assets/image/bento.png'
     },
     {
       id: 7,
       name: 'คาราด้า',
       price: 20,
       detail: 'TARO',
-      imageURL: '../../assets/KARADA.png'
+      imageURL: '../../assets/image/KARADA.png'
     },
   ]
 
